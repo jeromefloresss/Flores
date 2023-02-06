@@ -1,26 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+      rel="stylesheet"
+    />
     <title>Form Activity</title>
+    <style>
+      body {
+        background-color: lightslategrey;
+        font-family: Oswald;
+        font-size: 20px;
+      }
+      div {
+        width: fit-content;
+        background-color: white;
+        padding: 20px 25px 20px 20px;
+        border-radius: 5px;
+        margin: 10px auto;
+      }
+      .inputBox {
+        width: 100%;
+      }
+      input[type="reset"]{
+        background-color: red;
+        color: white;
+        border: white;
+        padding: 5px 20px;
+      }
+      input[type="submit"]{
+        background-color: green;
+        color: white;
+        border: white;
+        padding: 5px 20px;
+      }
+    </style>
   </head>
   <body>
-    <h1>Registration Form</h1>
-    First Name: <input type="text" name="firstname" /> <br />
-    Last Name: <input type="text" name="lastname" /> <br />
-    Nick Name: <input type="text" name="nickname" /> <br />
-    Email: <input type="email" name="email" /> <br />
-    Password: <input type="password" name="password" /> <br />
-    Date of Birth: <input type="date" name="birthday" /> <br />
-    Gender:
-    <input type="radio" name="male" value="male" /> Male
-    <input type="radio" name="female" value="female" /> Female
-    <input type="radio" name="other" value="other" /> Other
-    <br />
-    Mobile: <input type="tel" name="mobilenumber" /> <br />
-    Address:
-    <textarea name="address" value="Address: " cols="30" rows="10"></textarea>
-    <br />
-    <input type="submit" value="Submit" />
-    <input type="reset" value="Reset" />
+    <div>
+      <form>
+        <h1>Registration Form</h1>
+        First Name: <br />
+        <input type="text" class="inputBox" name="firstname" /> <br />
+        Last Name: <br />
+        <input type="text" class="inputBox" name="lastname" /> <br />
+        Nick Name: <br />
+        <input type="text" class="inputBox" name="nickname" /> <br />
+        Email: <br />
+        <input type="email" class="inputBox" name="email" /> <br />
+        Password: <br />
+        <input type="password" class="inputBox" name="password" /> <br />
+        Date of Birth: <br />
+        <input type="date" class="inputBox" name="birthday" /> <br />
+        Gender: <br />
+        <input type="radio" name="gender" value="male" /> Male
+        <input type="radio" name="gender" value="female" /> Female
+        <input type="radio" name="gender" value="other" /> Other
+        <br />
+        Mobile: <br />
+        <input type="tel" class="inputBox" name="mobilenumber" /> <br />
+        Address: <br />
+        <textarea
+          class="inputBox"
+          name="address"
+          value="Address: "
+          cols="30"
+          rows="10"
+        ></textarea>
+        <br />
+        <input type="submit" value="Submit" />
+        <input type="reset" value="Reset" />
+      </form>
+    </div>
   </body>
 </html>
