@@ -1,0 +1,26 @@
+body{
+    background-color: #0d1b2a;
+}
+.pic{
+    width: 200px;
+    height: 200px; 
+    margin: 0 20px 0 0;
+    float: left;
+    border-radius: 10px;
+}
+h1{
+    font-family: 'Kanit', sans-serif;
+    margin-top: 0px;
+}
+.mainDiv{
+    margin: 50px;
+    background-color: #778da9;
+    padding: 15px;
+    border-radius: 15px;
+}
+.middle{
+    display:flex;
+}
+.header{
+    height: fit-content;
+}
