@@ -1,26 +1,124 @@
-body{
-    background-color: #0d1b2a;
+body {
+  background-color: #93e9be;
+  font-family: 'Montserrat';
+  padding: 20px;
 }
-.pic{
-    width: 200px;
-    height: 200px; 
-    margin: 0 20px 0 0;
-    float: left;
-    border-radius: 10px;
+.left {
+  float: left;
+  width: 25%;
+  height: 90vh;
+  text-align: center;
+  background-color: #d4f6e6;
+  margin: 10px;
+  border-radius: 15px;
+  padding: 10px;
 }
-h1{
-    font-family: 'Kanit', sans-serif;
-    margin-top: 0px;
+.mainDiv {
+  float: left;
+  width: 70%;
+  height: 90svh;
+  margin: 10px;
+  background-color: #d4f6e6;
+  padding: 10px;
+  border-radius: 15px;
 }
-.mainDiv{
-    margin: 50px;
-    background-color: #778da9;
-    padding: 15px;
-    border-radius: 15px;
+.mainDiv2 {
+  float: left;
+  width: 70%;
+  height: 90vh;
+  margin: 10px;
+  background-color: #d4f6e6;
+  padding: 10px;
+  border-radius: 15px;
 }
-.middle{
-    display:flex;
+.pic {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  border-radius: 10px;
 }
-.header{
-    height: fit-content;
+.nav{
+  padding: 0;
+}
+li{
+  padding-left: 0;
+}
+.bottom{
+  position:relative;
+}
+h1 {
+  font-family: "Kanit", sans-serif;
+  margin: 0px;
+}
+table{
+  width: 100%;
+  text-align: center;
+  border: 1px solid darkgray;
+  border-collapse: collapse;
+}
+th{
+  margin: auto;
+  padding: 10px;
+  border:1px solid darkgray;
+}
+td{
+  border:1px solid darkgray;
+  margin: 0;
+}
+.middle {
+  text-align: left;
+}
+.header {
+  height: fit-content;
+}
+.backButton{
+  padding: 5px 30px;
+  margin: 5px;
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+}
+.form{
+  margin: 50px;
+  padding: 30px;
+}
+input{
+  margin: 0 0 10px 0;
+  padding: 5px 10px 5px 10px;
+  border-radius: 15px;
+  border: 1px solid black;
+  width: 300px;
+}
+textarea{
+  margin: 0 0 10px 0;
+  border-radius: 15px;
+  padding: 10px;
+  border: 1px solid black;
+}
+.drop{
+  margin-bottom: 20px;
+}
+input[type="submit"]{
+  background-color: rgb(47, 160, 47);
+  color: white;
+  width: 100px;
+}
+input[type="reset"]{
+  background-color: #fd3d3d;
+  color: white;
+  width: 100px;
+}
+hr{
+  height: 2px;
+  background-color: black;
+}
+.info{
+  text-align: left;
+}
+.work{
+  margin: 2px ;
+}
+.icon{
+  width: 30px;
+  margin: 0 10px;;
 }
