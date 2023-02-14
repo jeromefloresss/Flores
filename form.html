@@ -24,24 +24,69 @@
       .inputBox {
         width: 100%;
       }
-      input[type="reset"]{
+      input[type="reset"] {
         background-color: red;
         color: white;
         border: white;
         padding: 5px 20px;
       }
-      input[type="submit"]{
+      input[type="button"] {
         background-color: green;
         color: white;
         border: white;
         padding: 5px 20px;
       }
+      .alert {
+        color: red;
+      }
+      p {
+        font-size: 15px;
+      }
+      .formAlert{
+        color: green;
+      }
     </style>
+    <script language="Javascript" type="text/javascript">
+      function verifyForm() {
+        var isMinor = true;
+        var passwordPassed = false;
+        //verify password
+        var password = document.getElementById("pass").value;
+        console.log(password);
+        if (password.length < 8) {
+          document.getElementById("passwordAlert").innerHTML =
+            "Password must be at least 8 characters.";
+        } else {
+          document.getElementById("passwordAlert").innerHTML = "";
+          passwordPassed = true;
+        }
+
+        //verify age
+        var birthDate = new Date(document.getElementById("date").value);
+        var today = new Date();
+        var age = today.getFullYear() - birthDate.getFullYear();
+        var m = today.getMonth() - birthDate.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) age--;
+        console.log(age);
+        if (age <= 21) {
+          document.getElementById("ageAlert").innerHTML =
+            "Minors are not allowed!";
+        } else {
+          document.getElementById("ageAlert").innerHTML = "";
+          isMinor = false;
+        }
+
+        if (isMinor === false && passwordPassed === true) {
+          document.getElementById("formAlert").innerHTML = "Hooray! Your account has been successfully created.";
+        }
+      }
+    </script>
   </head>
   <body>
     <div>
-      <form>
-        <h1>Registration Form</h1>
+      <h1>Registration Form</h1>
+      <p id="formAlert" class="formAlert"></p>
+      <form name="info">
         First Name: <br />
         <input type="text" class="inputBox" name="firstname" /> <br />
         Last Name: <br />
@@ -51,9 +96,12 @@
         Email: <br />
         <input type="email" class="inputBox" name="email" /> <br />
         Password: <br />
-        <input type="password" class="inputBox" name="password" /> <br />
+        <input type="password" class="inputBox" name="password" id="pass" />
+        <br />
+        <p class="alert" id="passwordAlert"></p>
         Date of Birth: <br />
-        <input type="date" class="inputBox" name="birthday" /> <br />
+        <input type="date" class="inputBox" name="birthday" id="date" /> <br />
+        <p id="ageAlert" class="alert"></p>
         Gender: <br />
         <input type="radio" name="gender" value="male" /> Male
         <input type="radio" name="gender" value="female" /> Female
@@ -70,7 +118,7 @@
           rows="10"
         ></textarea>
         <br />
-        <input type="submit" value="Submit" />
+        <input type="button" value="Submit" onclick="verifyForm()" />
         <input type="reset" value="Reset" />
       </form>
     </div>
